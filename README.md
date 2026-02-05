@@ -1,4 +1,4 @@
-<img width="1789" height="988" alt="image" src="https://github.com/user-attachments/assets/a41908a8-2d04-491b-9c2b-7e5bb4283a87" />![Credit_Card_Customer_Attrition_Analysis](screenshots/cover-banner.png)
+![Credit_Card_Customer_Attrition_Analysis](screenshots/cover-banner.png)
 ## Credit Card Customer Attrition: Diagnostic and Early Warning Analysis
 
 ### Business Question

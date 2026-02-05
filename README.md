@@ -20,7 +20,7 @@ Page 1:
 - While the business remains profitable overall, some products generate negative profit. This is not necessarily an issue, as loss-leading products can be part of a deliberate pricing strategy. However, identifying these products helps distinguish between strategic trade-offs and potential inefficiencies.
 
 2. Discount Impact: Discount Impact o Profitability
-![Executive Overview](screenshots/Page-2-Discount-Impact.png)
+![Executive Overview](screenshots/Page-2-Attrition-Risk-Drivers.png)
 ### Key Insights
 Page 2:
 - Orders may contain multiple products with different discount rates. A revenue-weighted discount is used to reflect the true financial impact of discounting and avoid misleading averages.
@@ -28,7 +28,7 @@ Page 2:
 - Profit margins remain positive at low discount levels but decline sharply beyond 20-30%. Discounts above 40% consistently generate losses across all categories, with Office Supplies showing the steepest margin erosion. This suggests a critical discount threshold beyond which revenue growth comes at the expense of profitability
 
 3. Loss Leader Strategy: Basket Analysis
-![Loss Leader Strategy](screenshots/Page-3-Loss-Leader-Strategy.png)
+![Loss Leader Strategy](screenshots/Page-3-Early-Warning-Signal-Identification.png)
 ### Key Insights
 Page 3:
 - The Order Size vs Profitability chart shows that loss leader strategy fails when the items are sold as single items.

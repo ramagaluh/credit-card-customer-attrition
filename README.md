@@ -1,11 +1,11 @@
-![E-commerce Profit Leakage Analysis](screenshots/cover-banner.png)
-## Profit Margin Analysis: US E-Commerce Sales 2020
+<img width="1789" height="988" alt="image" src="https://github.com/user-attachments/assets/a41908a8-2d04-491b-9c2b-7e5bb4283a87" />![Credit_Card_Customer_Attrition_Analysis](screenshots/cover-banner.png)
+## Credit Card Customer Attrition: Diagnostic and Early Warning Analysis
 
 ### Business Question
-#### Which products and customer behaviors drive revenue but destroy profit?
+#### How can we identify and prevent customer churn before it actually happens?
 
 ### Dataset
-United States E-Commerce Records (2020)
+[Credit Card customers](https://www.kaggle.com/datasets/sakshigoyal7/credit-card-customers)
 
 ### Tools
 - Power BI
@@ -13,32 +13,34 @@ United States E-Commerce Records (2020)
 - DAX
 
 ### Dashboard Pages
-1. Executive Overview: Revenue vs Profit Overview
+1. Executive Overview
 ![Executive Overview](screenshots/Page-1-Executive-Overview.png)
 ### Key Insights
 Page 1:
-- While the business remains profitable overall, some products generate negative profit. This is not necessarily an issue, as loss-leading products can be part of a deliberate pricing strategy. However, identifying these products helps distinguish between strategic trade-offs and potential inefficiencies.
+- Customer activity is declining at scale, with most customers transacting less than the prior quarter
+- Disengagement precedes churn - activity drops are widespread while attrition remains moderate
+- Credit stress is not the driver - utilization is healthy and high-utilization customers are rare
+- Inactivity is rising among declining customers, confirming early-stage disengagement
 
-2. Discount Impact: Discount Impact o Profitability
-![Executive Overview](screenshots/Page-2-Attrition-Risk-Drivers.png)
+2. Attrition Risk Drivers
+![Attrition Risk Drivers](screenshots/Page-2-Attrition-Risk-Drivers.png)
 ### Key Insights
 Page 2:
-- Orders may contain multiple products with different discount rates. A revenue-weighted discount is used to reflect the true financial impact of discounting and avoid misleading averages.
-- Orders with weighted discounts above 40% consistently generate negative profit margins, indicating aggressive discounting as the main loss driver.
-- Profit margins remain positive at low discount levels but decline sharply beyond 20-30%. Discounts above 40% consistently generate losses across all categories, with Office Supplies showing the steepest margin erosion. This suggests a critical discount threshold beyond which revenue growth comes at the expense of profitability
+- Sharp declines in transaction activity are the strongest indicator of churn, with severe drops showing significantly higher attrition rates
+- Customers often churn while still recently active, indicating that attrition begins with early disengagement rather than prolonged inactivity
+- Moderate credit utilization is associated with the lowest attrition, while both low-use and near-limit customers show elevated churn risk, suggesting different churn mechanisms
+- Customer tenure has only a marginal impact on attrition, reinforcing that behavioral changes matter more than lifecycle stage
 
-3. Loss Leader Strategy: Basket Analysis
-![Loss Leader Strategy](screenshots/Page-3-Early-Warning-Signal-Identification.png)
+3. Early Warning Signal Identification
+![Early Warning Signal Identification](screenshots/Page-3-Early-Warning-Signal-Identification.png)
 ### Key Insights
 Page 3:
-- The Order Size vs Profitability chart shows that loss leader strategy fails when the items are sold as single items.
-- The Order Size vs Profitability chart shows that deep discounts are most dangerous when the customer only buys one discounted items. Even if one item in a 6-item basket is heavily discounted, the other 5 items are likely pulling the total order profit back into the positive zone.
-- The diagonal numbers (564, 1272, 526) in the Basket Analysis chart represents orders where the customer only bought items from that one category. Because the 1272 orders have no other category in the basket to offset the losses, any discount given on these is a direct hit to the bottom line with no secondary benefit.
-- Mixed baskets by category is safer
-- The profit margin by basket size band is calculated as total profit divided by total sales. The chart shows that Small Baskets (2-3 items) are the peak.
-- The Basket Analysis matrix explains multi-item orders often include a mix of categories such 316 (technology and office supplies) where the profitable items protect the total order margin from dipping below zero.
+- Declining transaction activity is the earliest and strongest attrition signal, regardless of credit utilization level
+- Credit utilization does not show a linear relationship with activity decline, indicating that churn risk is driven more by disengagement than by credit stress
+- High-risk customers cluster in declining activity segments, with high utilization amplifying risk but affecting a smaller population
 
 ### Business Recommendation
-- Eliminate deep discounts on "isolated" single-item orders
-- While small baskets (2-3 item) are the most efficient profit engine, single-item transactions represent a high-risk "gambling" zone.
-- By making discounts contingent on a basket mix, the business can force a cross-sell that uses stable categories like technology to shield against the volatility of discounted Furniture or Office Supplies.
+- Target behavioral drops: launch retention offers immediately when transaction volume dips below 80% of the previous quarter. Don't wait for total inactivity
+- Try a limited-time points booster or cashback offer for the declining + low-moderate utilization before they disappear entirely: since they have plenty of available credit, they don't need a limit increase
+- Optimize utilization: target low-use customers with "Spend and Get" promos to move them into the stable-moderate utilization bracket
+- Watch the quiet ones: customers with a sharp drop in activity are the biggest risk, even if they don't have high credit balances
